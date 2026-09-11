@@ -1,11 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "bookrecommendationsystem"
 version = "0.1.0"
-description = "Add your description here"
+description = "End-to-end book recommendation system"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = [
     "numpy>=2.5.3",
     "pandas>=3.0.5",
     "scikit-learn>=1.9.0",
+    "scipy",
+    "pyyaml",
+    "streamlit",
 ]
+
+[tool.setuptools.packages.find]
+include = ["books_recommender*"]
